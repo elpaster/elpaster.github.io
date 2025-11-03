@@ -146,4 +146,160 @@ table {
     text-align: left;
   }
 
+  /* ---------- Base Styles for Nightjar Page ---------- */
+
+  .nightjar-page {
+    font-family: "Noto Sans", sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+    margin: 0;
+    min-height: 100vh;
+  }
   
+  /* Override the global container rules for this page */
+  .nightjar-page .container {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "nav nav nav"
+      "aside-left main aside-right"
+      "footer footer footer";
+    grid-template-columns: 200px 1fr 250px;
+    grid-template-rows: auto auto auto auto;  /* 👈 allow rows to size by content */
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  
+  /* Disable global aside float on this page */
+  .nightjar-page aside {
+    float: none;
+    margin: 0;
+  }
+  
+  /* Assign explicit grid areas */
+  .nightjar-page header { grid-area: header; }
+  .nightjar-page nav { grid-area: nav; }
+  .nightjar-page main { 
+    grid-area: main; 
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow: auto;   /* ensures tall content shows */
+  }
+  .nightjar-page .sidebar-left { grid-area: aside-left; }
+  .nightjar-page .sidebar-right { grid-area: aside-right; }
+  .nightjar-page footer { grid-area: footer; }
+  
+  /* Shared block styling */
+  .nightjar-page header {
+    background-color: #2b2b2b;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .nightjar-page nav {
+    background-color: #4a4a4a;
+    color: white;
+    padding: 1rem;
+  }
+  
+  .nightjar-page nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    justify-content: space-around;
+  }
+  
+  .nightjar-page nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+  }
+  
+  .nightjar-page nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .nightjar-page .sidebar-left,
+  .nightjar-page .sidebar-right {
+    background-color: #e6e6e6;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .nightjar-page footer {
+    background-color: #2b2b2b;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+  }
+  
+  .nightjar-page main {
+    grid-area: main;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow: visible;   /* 👈 allow content to expand naturally */
+    min-height: 100%;    /* 👈 ensure it grows with text */
+  }
+  
+  .nightjar-page .sidebar-left img {
+    width: 100%;
+    height: auto;         /* 👈 keeps natural aspect ratio */
+    max-width: 100%;
+    border-radius: 6px;
+    display: block;
+  }
+
+  /* ---------- Responsive Layouts ---------- */
+  
+  /* Tablet */
+  @media (max-width: 900px) {
+    .nightjar-page .container {
+      grid-template-areas:
+        "header header"
+        "nav nav"
+        "main aside-right"
+        "aside-left footer";
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto auto 1fr auto;
+    }
+  
+    .nightjar-page nav ul {
+      justify-content: space-between;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 600px) {
+    .nightjar-page .container {
+      grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside-left"
+        "aside-right"
+        "footer";
+      grid-template-columns: 1fr;
+    }
+  
+    .nightjar-page nav ul {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .nightjar-page nav a {
+      display: block;
+      padding: 1rem;
+      text-align: center;
+      border-top: 1px solid #666;
+    }
+  
+    .nightjar-page nav a:first-child {
+      border-top: none;
+    }
+  }

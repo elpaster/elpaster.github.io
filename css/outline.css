@@ -60,7 +60,7 @@ body.why-page {
   position: relative; 
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   z-index: 1;
 }
 
@@ -176,6 +176,9 @@ body.why-page {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
   position: relative;
   transition: var(--transition);
+  clear: both;
+  overflow: auto;
+  z-index: 1;
 }
 
 .why-page .argument-section::before {
@@ -273,13 +276,14 @@ body.why-page {
   background: linear-gradient(135deg, var(--primary-color), #1e4a66);
   padding: 3rem;
   border-radius: 20px;
-  margin: 3rem 0;
+  margin: 0 0 3rem 0;
+  padding-top: 3rem;
   text-align: center;
   color: white;
   position: relative;
   overflow: hidden;
   clear: both;
-  z-index: 10;
+  /*z-index: 10;*/
 }
 
 .why-page .quote-section::before {

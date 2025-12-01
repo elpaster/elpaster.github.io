@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Build Accessible Sites</title>
+    <link href="css/outline.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="how-page">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav class="top-nav" aria-label="Main Navigation">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="img/E (3).png" alt="Ella Pasternak Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="Finalproject.html">Home</a></li>
+                <li><a href="why.html">Why UD Matters</a></li>
+                <li><a href="what.html">What is UD?</a></li>
+                <li><a href="how.html" aria-current="page">How to Build Accessible Sites</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" class="content-wrapper">
+        <header class="hero-section">
+            <h1 class="page-title">How to Build Accessible Sites</h1>
+            <p class="hero-subtitle">A comprehensive guide to creating inclusive web experiences</p>
+        </header>
+
+        <!-- Introduction -->
+        <section class="intro-section">
+            <h2>Building Accessibility from the Ground Up</h2>
+            <p>Creating accessible websites requires understanding both the technical foundations and design principles that make content usable for everyone. This guide will walk you through the essential techniques, from planning your information architecture to testing your final product.</p>
+        </section>
+
+        <!-- Information Architecture -->
+        <article class="major-section">
+            <h2><span class="section-icon material-symbols-outlined">account_tree</span>Information Architecture</h2>
+            
+            <div class="content-block">
+                <h3>What is Information Architecture?</h3>
+                <p>Information Architecture (IA) is the structural design of information—how content is organized, labeled, and navigated. Good IA is the foundation of an accessible website because it helps all users find what they need quickly and efficiently.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Key Principles of Accessible IA</h3>
+                
+                <div class="principle-box">
+                    <h4>1. Clear Hierarchy</h4>
+                    <p>Organize content in a logical tree structure with clear parent-child relationships. Users should always understand where they are and how to get to related content.</p>
+                    <div class="example-box good">
+                        <h4>✓ Good Example:</h4>
+                        <pre>Home
+├── Products
+│   ├── Category A
+│   │   ├── Product 1
+│   │   └── Product 2
+│   └── Category B
+└── About Us</pre>
+                    </div>
+                </div>
+
+                <div class="principle-box">
+                    <h4>2. Consistent Navigation</h4>
+                    <p>Keep navigation menus in the same location and order across all pages. This helps users build mental models of your site structure.</p>
+                    <div class="example-box good">
+                        <h4>✓ Good Example:</h4>
+                        <p>Navigation appears in the same position on every page with identical labels and order.</p>
+                    </div>
+                    <div class="example-box bad">
+                        <h4>✗ Bad Example:</h4>
+                        <p>Different pages have navigation in different positions or with varying labels for the same destination.</p>
+                    </div>
+                </div>
+
+                <div class="principle-box">
+                    <h4>3. Descriptive Labels</h4>
+                    <p>Use clear, descriptive names for navigation items that accurately describe the destination.</p>
+                    <div class="example-box good">
+                        <h4>✓ Good Example:</h4>
+                        <p>"Contact Us" | "Product Catalog" | "Customer Support"</p>
+                    </div>
+                    <div class="example-box bad">
+                        <h4>✗ Bad Example:</h4>
+                        <p>"Click Here" | "More" | "Go"</p>
+                    </div>
+                </div>
+
+                <div class="principle-box">
+                    <h4>4. Multiple Ways to Navigate</h4>
+                    <p>Provide different navigation methods: main menu, search, breadcrumbs, and sitemaps. Users have different preferences and needs.</p>
+                    <ul>
+                        <li><strong>Main Navigation:</strong> Primary menu for common destinations</li>
+                        <li><strong>Search:</strong> For users who know what they want</li>
+                        <li><strong>Breadcrumbs:</strong> Show current location in hierarchy</li>
+                        <li><strong>Sitemap:</strong> Overview of entire site structure</li>
+                    </ul>
+                </div>
+
+                <div class="principle-box">
+                    <h4>5. Limit Menu Depth</h4>
+                    <p>Keep navigation menus shallow (3 levels maximum). Deep nested menus are difficult to navigate, especially for keyboard and screen reader users.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Semantic HTML -->
+        <article class="major-section">
+            <h2><span class="section-icon material-symbols-outlined">code</span>Semantic HTML Best Practices</h2>
+            
+            <div class="content-block">
+                <h3>What is Semantic HTML?</h3>
+                <p>Semantic HTML means using HTML elements according to their intended purpose. Instead of using generic <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> tags for everything, semantic HTML uses meaningful elements like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code>.</p>
+                <p><strong>Why it matters:</strong> Screen readers and other assistive technologies rely on semantic HTML to understand page structure and navigate content effectively.</p>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <h4>Document Structure Tags</h4>
+                    <div class="example-box good">
+                        <h4>✓ Good Example:</h4>
+                        <pre><code>&lt;header&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;h1&gt;Page Title&lt;/h1&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Section Title&lt;/h2&gt;
+      &lt;p&gt;Content here&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/article&gt;
+  &lt;aside&gt;
+    &lt;h2&gt;Related Links&lt;/h2&gt;
+  &lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;Copyright 2025&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+                    </div>
+                    <div class="example-box bad">
+                        <h4>✗ Bad Example:</h4>
+                        <pre><code>&lt;div class="header"&gt;
+  &lt;div class="nav"&gt;
+    &lt;div class="menu"&gt;
+      &lt;a href="/"&gt;Home&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="content"&gt;
+  &lt;div class="title"&gt;Page Title&lt;/div&gt;
+  &lt;div class="text"&gt;Content here&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        <p class="explanation">This "div soup" provides no semantic meaning to assistive technologies.</p>
+                    </div>
+                </div>
+
+                <div class="comparison-card">
+                    <h4>Heading Hierarchy</h4>
+                    <p>Use headings (h1-h6) in proper order without skipping levels. Screen readers use headings to navigate and understand content structure.</p>
+                    <div class="example-box good">
+                        <h4>✓ Good Example:</h4>
+                        <pre><code>&lt;h1&gt;Main Page Title&lt;/h1&gt;
+&lt;h2&gt;First Major Section&lt;/h2&gt;
+&lt;h3&gt;Subsection&lt;/h3&gt;
+&lt;h3&gt;Another Subsection&lt;/h3&gt;
+&lt;h2&gt;Second Major Section&lt;/h2&gt;</code></pre>
+                    </div>
+                    <div class="example-box bad">
+                        <h4>✗ Bad Example:</h4>
+                        <pre><code>&lt;h1&gt;Main Page Title&lt;/h1&gt;
+&lt;h3&gt;Section&lt;/h3&gt; &lt;!-- Skipped h2 --&gt;
+&lt;h5&gt;Subsection&lt;/h5&gt; &lt;!-- Skipped h4 --&gt;</code></pre>
+                        <p class="explanation">Skipping heading levels confuses screen reader users about content hierarchy.</p>
+                    </div>
+                </div>
+
+                <div class="comparison-card">
+                    <h4>Lists and Navigation</h4>
+                    <div class="example-box good">
+                        <h4>✓ Good Example:</h4>
+                        <pre><code>&lt;nav aria-label="Main navigation"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                        <p class="explanation">Screen readers announce "Navigation, list of 3 items" and let users jump between list items.</p>
+                    </div>
+                    <div class="example-box bad">
+                        <h4>✗ Bad Example:</h4>
+                        <pre><code>&lt;div class="nav"&gt;
+  &lt;a href="/"&gt;Home&lt;/a&gt;
+  &lt;a href="/about"&gt;About&lt;/a&gt;
+  &lt;a href="/contact"&gt;Contact&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                        <p class="explanation">No semantic structure—screen readers can't easily identify this as navigation.</p>
+                    </div>
+                </div>
+
+                <div class="comparison-card">
+                    <h4>Forms and Labels</h4>
+                    <div class="example-box good">
+                        <h4>✓ Good Example:</h4>
+                        <pre><code>&lt;form&gt;
+  &lt;label for="email"&gt;Email Address&lt;/label&gt;
+  &lt;input type="email" id="email" 
+         name="email" required 
+         aria-describedby="email-hint"&gt;
+  &lt;span id="email-hint"&gt;
+    We'll never share your email
+  &lt;/span&gt;
+  
+  &lt;button type="submit"&gt;Subscribe&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                        <p class="explanation">Screen readers announce the label and hint when the field receives focus.</p>
+                    </div>
+                    <div class="example-box bad">
+                        <h4>✗ Bad Example:</h4>
+                        <pre><code>&lt;form&gt;
+  Email Address
+  &lt;input type="text" placeholder="Email"&gt;
+  &lt;div&gt;Click to subscribe&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                        <p class="explanation">No label association, placeholder disappears when typing, and the button isn't actually a button.</p>
+                    </div>
+                </div>
+
+                <div class="comparison-card">
+                    <h4>Buttons vs Links</h4>
+                    <div class="example-box good">
+                        <h4>✓ Good Example:</h4>
+                        <pre><code>&lt;!-- Use buttons for actions --&gt;
+&lt;button type="submit"&gt;Submit Form&lt;/button&gt;
+&lt;button onclick="openModal()"&gt;Open Dialog&lt;/button&gt;
+
+&lt;!-- Use links for navigation --&gt;
+&lt;a href="/about"&gt;About Us&lt;/a&gt;
+&lt;a href="/products"&gt;View Products&lt;/a&gt;</code></pre>
+                    </div>
+                    <div class="example-box bad">
+                        <h4>✗ Bad Example:</h4>
+                        <pre><code>&lt;!-- Don't use links as buttons --&gt;
+&lt;a href="#" onclick="submitForm()"&gt;Submit&lt;/a&gt;
+
+&lt;!-- Don't use divs as buttons --&gt;
+&lt;div onclick="openModal()"&gt;Open&lt;/div&gt;</code></pre>
+                        <p class="explanation">Screen readers expect buttons to perform actions and links to navigate. This breaks user expectations.</p>
+                    </div>
+                </div>
+
+                <div class="comparison-card">
+                    <h4>Images and Alt Text</h4>
+                    <div class="example-box good">
+                        <h4>✓ Good Examples:</h4>
+                        <pre><code>&lt;!-- Informative image --&gt;
+&lt;img src="chart.png" 
+     alt="Bar chart showing 40% increase in sales from 2023 to 2024"&gt;
+
+&lt;!-- Functional image (link) --&gt;
+&lt;a href="/"&gt;
+  &lt;img src="logo.png" alt="Company Name Home"&gt;
+&lt;/a&gt;
+
+&lt;!-- Decorative image --&gt;
+&lt;img src="decoration.png" alt="" role="presentation"&gt;</code></pre>
+                    </div>
+                    <div class="example-box bad">
+                        <h4>✗ Bad Examples:</h4>
+                        <pre><code>&lt;!-- Generic alt text --&gt;
+&lt;img src="chart.png" alt="image"&gt;
+
+&lt;!-- Missing alt text --&gt;
+&lt;img src="logo.png"&gt;
+
+&lt;!-- Alt text on decorative image --&gt;
+&lt;img src="decoration.png" 
+     alt="blue wavy line decoration"&gt;</code></pre>
+                        <p class="explanation">Alt text should be descriptive for meaningful images, empty for decorative ones.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- HTML Tags and Classes -->
+        <article class="major-section">
+            <h2><span class="section-icon material-symbols-outlined">label</span>HTML Tags and Classes Best Practices</h2>
+            
+            <div class="content-block">
+                <h3>Using Classes Effectively</h3>
+                <p>Classes should describe purpose or content type, not appearance. This makes code more maintainable and accessible.</p>
+                
+                <div class="example-box good">
+                    <h4>✓ Good Class Names (Semantic):</h4>
+                    <pre><code>&lt;article class="blog-post"&gt;
+&lt;button class="primary-action"&gt;
+&lt;nav class="main-navigation"&gt;
+&lt;aside class="related-content"&gt;
+&lt;div class="error-message"&gt;</code></pre>
+                    <p class="explanation">These names describe what the element is or does, making code understandable.</p>
+                </div>
+
+                <div class="example-box bad">
+                    <h4>✗ Bad Class Names (Presentational):</h4>
+                    <pre><code>&lt;article class="blue-box"&gt;
+&lt;button class="big-red-button"&gt;
+&lt;nav class="top-bar"&gt;
+&lt;aside class="right-sidebar"&gt;
+&lt;div class="bold-text"&gt;</code></pre>
+                    <p class="explanation">These describe appearance, which becomes misleading if design changes.</p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Essential Accessibility Attributes</h3>
+                
+                <div class="attribute-list">
+                    <div class="attribute-item">
+                        <h4><code>lang</code> attribute</h4>
+                        <p>Specify the language of your content so screen readers use correct pronunciation.</p>
+                        <pre><code>&lt;html lang="en"&gt;
+&lt;p lang="es"&gt;Hola, mundo!&lt;/p&gt;</code></pre>
+                    </div>
+
+                    <div class="attribute-item">
+                        <h4><code>aria-label</code></h4>
+                        <p>Provide accessible names for elements without visible text.</p>
+                        <pre><code>&lt;button aria-label="Close dialog"&gt;
+  &lt;span aria-hidden="true"&gt;×&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;nav aria-label="Main navigation"&gt;...&lt;/nav&gt;</code></pre>
+                    </div>
+
+                    <div class="attribute-item">
+                        <h4><code>aria-describedby</code></h4>
+                        <p>Link elements to descriptive text.</p>
+                        <pre><code>&lt;input type="password" 
+       aria-describedby="password-requirements"&gt;
+&lt;div id="password-requirements"&gt;
+  Must be at least 8 characters
+&lt;/div&gt;</code></pre>
+                    </div>
+
+                    <div class="attribute-item">
+                        <h4><code>aria-live</code></h4>
+                        <p>Announce dynamic content changes to screen readers.</p>
+                        <pre><code>&lt;div aria-live="polite" aria-atomic="true"&gt;
+  &lt;!-- Status messages appear here --&gt;
+  Form submitted successfully!
+&lt;/div&gt;</code></pre>
+                    </div>
+
+                    <div class="attribute-item">
+                        <h4><code>role</code> attribute</h4>
+                        <p>Define the purpose of an element when semantic HTML isn't enough.</p>
+                        <pre><code>&lt;div role="alert"&gt;Error: Please try again&lt;/div&gt;
+&lt;div role="search"&gt;...&lt;/div&gt;</code></pre>
+                        <p class="note"><strong>Note:</strong> Only use ARIA roles when semantic HTML elements can't achieve the same result.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Accessible CSS -->
+        <article class="major-section">
+            <h2><span class="section-icon material-symbols-outlined">palette</span>Accessible CSS: Color and Contrast</h2>
+            
+            <div class="content-block">
+                <h3>Understanding Color Contrast</h3>
+                <p>Color contrast is the difference in brightness between text and its background. Adequate contrast ensures text is readable for people with low vision or color blindness.</p>
+                
+                <div class="contrast-requirements">
+                    <h4>WCAG Contrast Requirements</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Text Size</th>
+                                <th>Level AA (Minimum)</th>
+                                <th>Level AAA (Enhanced)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Normal text (under 18pt/24px)</td>
+                                <td>4.5:1</td>
+                                <td>7:1</td>
+                            </tr>
+                            <tr>
+                                <td>Large text (18pt+ or 14pt+ bold)</td>
+                                <td>3:1</td>
+                                <td>4.5:1</td>
+                            </tr>
+                            <tr>
+                                <td>UI components & graphics</td>
+                                <td>3:1</td>
+                                <td>Not required</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Building an Accessible Color Palette</h3>
+                
+                <div class="example-box good">
+                    <h4>✓ Good Contrast Examples:</h4>
+                    <div class="color-examples">
+                        <div class="color-swatch" style="background: #000000; color: #FFFFFF; padding: 1rem; margin: 0.5rem 0;">
+                            <strong>Black on White</strong><br>
+                            Contrast: 21:1 (Excellent)
+                        </div>
+                        <div class="color-swatch" style="background: #2d5a7b; color: #FFFFFF; padding: 1rem; margin: 0.5rem 0;">
+                            <strong>Dark Blue on White Background</strong><br>
+                            Contrast: 7.4:1 (AAA Level)
+                        </div>
+                        <div class="color-swatch" style="background: #FFFFFF; color: #1a1a1a; padding: 1rem; margin: 0.5rem 0; border: 1px solid #ccc;">
+                            <strong class = alt-text >Nearly Black on White</strong><br>
+                            Contrast: 16.1:1 (Excellent)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-box bad">
+                    <h4>✗ Poor Contrast Examples:</h4>
+                    <div class="color-examples">
+                        <div class="color-swatch" style="background: #FFFFFF; color: #CCCCCC; padding: 1rem; margin: 0.5rem 0; border: 1px solid #000;">
+                            <strong>Light Gray on White</strong><br>
+                            Contrast: 1.6:1 (Fails all levels)
+                        </div>
+                        <div class="color-swatch" style="background: #FF6B6B; color: #FF0000; padding: 1rem; margin: 0.5rem 0;">
+                            <strong>Red on Pink</strong><br>
+                            Contrast: 1.9:1 (Fails all levels)
+                        </div>
+                        <div class="color-swatch" style="background: #FFEB3B; color: #FFFFFF; padding: 1rem; margin: 0.5rem 0;">
+                            <strong>White on Yellow</strong><br>
+                            Contrast: 1.2:1 (Fails all levels)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>CSS Best Practices for Accessibility</h3>
+                
+                <div class="css-practice">
+                    <h4>1. Never Remove Focus Indicators</h4>
+                    <div class="example-box bad">
+                        <h4>✗ Bad:</h4>
+                        <pre><code>/* Never do this! */
+* {
+  outline: none;
+}
+
+a:focus, button:focus {
+  outline: 0;
+}</code></pre>
+                        <p class="explanation">Removing focus indicators makes keyboard navigation impossible.</p>
+                    </div>
+                    <div class="example-box good">
+                        <h4>✓ Good:</h4>
+                        <pre><code>/* Always provide visible focus */
+a:focus, button:focus {
+  outline: 2px solid #2d5a7b;
+  outline-offset: 2px;
+}
+
+/* Or use modern focus-visible */
+button:focus-visible {
+  outline: 3px solid #2d5a7b;
+  outline-offset: 2px;
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="css-practice">
+                    <h4>2. Use Relative Units</h4>
+                    <div class="example-box good">
+                        <h4>✓ Good:</h4>
+                        <pre><code>body {
+  font-size: 100%; /* Respects user preferences */
+}
+
+h1 {
+  font-size: 2rem; /* Scales with base font size */
+}
+
+.container {
+  max-width: 60ch; /* Based on character width */
+  padding: 1em;
+}</code></pre>
+                        <p class="explanation">Relative units allow users to adjust text size in browser settings.</p>
+                    </div>
+                    <div class="example-box bad">
+                        <h4>✗ Bad:</h4>
+                        <pre><code>body {
+  font-size: 16px; /* Fixed size */
+}
+
+h1 {
+  font-size: 32px; /* Doesn't scale */
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="css-practice">
+                    <h4>3. Don't Rely on Color Alone</h4>
+                    <div class="example-box good">
+                        <h4>✓ Good:</h4>
+                        <pre><code>.error {
+  color: #d32f2f;
+  border-left: 4px solid #d32f2f;
+}
+
+.error::before {
+  content: "⚠ ";
+}
+
+.success {
+  color: #388e3c;
+  border-left: 4px solid #388e3c;
+}
+
+.success::before {
+  content: "✓ ";
+}</code></pre>
+                        <p class="explanation">Icons and borders supplement color to convey meaning.</p>
+                    </div>
+                </div>
+
+                <div class="css-practice">
+                    <h4>4. Ensure Sufficient Touch Targets</h4>
+                    <div class="example-box good">
+                        <h4>✓ Good:</h4>
+                        <pre><code>button, a {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.5rem 1rem;
+}
+
+/* Add space between interactive elements */
+nav a {
+  margin: 0.5rem;
+}</code></pre>
+                        <p class="explanation">44×44 pixels minimum makes targets easy to tap on mobile devices.</p>
+                    </div>
+                </div>
+
+                <div class="css-practice">
+                    <h4>5. Use CSS Variables for Consistent Colors</h4>
+                    <div class="example-box good">
+                        <h4>✓ Good:</h4>
+                        <pre><code>:root {
+  --color-primary: #2d5a7b;
+  --color-text: #1a1a1a;
+  --color-background: #ffffff;
+  --color-error: #d32f2f;
+  --color-success: #388e3c;
+}
+
+body {
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+.button-primary {
+  background: var(--color-primary);
+  color: var(--color-background);
+}</code></pre>
+                        <p class="explanation">CSS variables make it easy to maintain consistent, accessible color schemes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Tools for Checking Contrast</h3>
+                <ul class="tool-list">
+                    <li><strong>WebAIM Contrast Checker:</strong> webaim.org/resources/contrastchecker</li>
+                    <li><strong>Chrome DevTools:</strong> Built-in contrast ratio tool in the color picker</li>
+                    <li><strong>Accessible Colors:</strong> accessible-colors.com</li>
+                    <li><strong>Contrast Ratio:</strong> contrast-ratio.com</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- Keyboard Accessibility -->
+        <article class="major-section">
+            <h2><span class="section-icon material-symbols-outlined">keyboard</span>Keyboard Accessibility</h2>
+            
+            <div class="content-block">
+                <h3>Why Keyboard Accessibility Matters</h3>
+                <p>Many users rely on keyboards instead of mice, including people with motor disabilities, blind users with screen readers, and power users who prefer keyboard shortcuts. Every interactive element must be usable with only a keyboard.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Essential Keyboard Navigation Patterns</h3>
+                
+                <div class="keyboard-pattern">
+                    <h4>Tab Navigation</h4>
+                    <ul>
+                        <li><strong>Tab:</strong> Move forward through interactive elements</li>
+                        <li><strong>Shift + Tab:</strong> Move backward through interactive elements</li>
+                        <li><strong>Enter/Space:</strong> Activate buttons and links</li>
+                    </ul>
+                    <div class="example-box good">
+                        <h4>✓ Good Example:</h4>
+                        <pre><code>&lt;button&gt;Submit&lt;/button&gt;
+&lt;a href="/page"&gt;Link&lt;/a&gt;
+&lt;input type="text"&gt;</code></pre>
+                        <p class="explanation">All these elements are naturally keyboard accessible.</p>
+                    </div>
+                    <div class="example-box bad">
+                        <h4>✗ Bad Example:</h4>
+                        <pre><code>&lt;div onclick="submit()"&gt;Submit&lt;/div&gt;
+&lt;span onclick="navigate()"&gt;Link&lt;/span&gt;</code></pre>
+                        <p class="explanation">Divs and spans aren't in tab order and don't respond to keyboard events.</p>
+                    </div>
+                </div>
+
+                <div class="keyboard-pattern">
+                    <h4>Skip Links</h4>
+                    <p>Skip links allow keyboard users to bypass repetitive navigation and jump directly to main content.</p>
+                    <div class="example-box good">
+                        <h4>✓ Implementation:</h4>
+                        <pre><code>&lt;!-- HTML --&gt;
+&lt;a href="#main-content" class="skip-link"&gt;
+  Skip to main content
+&lt;/a&gt;
+
+&lt;main id="main-content"&gt;
+  &lt;!-- Page content --&gt;
+&lt;/main&gt;</code></pre>
+                        <pre><code>/* CSS */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 20px;
+  background: #2d5a7b;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 20px;
+}</code></pre>
+                        <p class="explanation">Skip link is hidden until keyboard focus, then appears at top of page.</p>
+                    </div>
+                </div>
+
+                <div class="keyboard-pattern">
+                    <h4>Managing Focus</h4>
+                    <p>When content changes dynamically (modals, menus, tabs), focus must be managed programmatically.</p>
+                    <div class="example-box good">
+                        <h4>✓ Modal Dialog Example:</h4>
+                        <pre><code>// When modal opens
+function openModal() {
+  modal.style.display = 'block';
+  modal.querySelector('.close-button').focus();
+  // Trap focus inside modal
+  document.addEventListener('keydown', trapFocus);
+}
+
+// When modal closes
+function closeModal() {
+  modal.style.display = 'none';
+  openButton.focus(); // Return focus
+  document.removeEventListener('keydown', trapFocus);
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="keyboard-pattern">
+                    <h4>Arrow Key Navigation</h4>
+                    <p>For complex components like tabs, menus, and toolbars, implement arrow key navigation.</p>
+                    <div class="example-box good">
+                        <h4>✓ Tab Panel Example:</h4>
+                        <pre><code>&lt;div role="tablist" aria-label="Sample Tabs"&gt;
+  &lt;button role="tab" aria-selected="true" 
+          aria-controls="panel1"&gt;
+    Tab 1
+  &lt;/button&gt;
+  &lt;button role="tab" aria-selected="false" 
+          aria-controls="panel2"&gt;
+    Tab 2
+  &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div role="tabpanel" id="panel1"&gt;
+  Content 1
+&lt;/div&gt;</code></pre>
+                        <p class="explanation">Left/Right arrows move between tabs, Tab key moves to panel content.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Testing -->
+        <article class="major-section">
+            <h2><span class="section-icon material-symbols-outlined">verified</span>Testing for Accessibility</h2>
+            
+            <div class="content-block">
+                <h3>Comprehensive Testing Approach</h3>
+                <p>Accessibility testing requires multiple methods: automated tools catch common issues, but manual testing finds nuanced problems that tools miss.</p>
+            </div>
+
+            <div class="testing-category">
+                <h3>1. Automated Testing Tools</h3>
+                <p>These tools scan your code for accessibility violations. Use multiple tools as each catches different issues.</p>
+                
+                <div class="tool-grid">
+                    <div class="tool-card">
+                        <h4>WAVE Browser Extension</h4>
+                        <p><strong>What it does:</strong> Visual feedback showing accessibility errors and warnings directly on your page</p>
+                        <p><strong>Best for:</strong> Quick visual inspection, identifying missing alt text, contrast issues</p>
+                        <p><strong>Link:</strong> <a href="https://wave.webaim.org/extension/" target="_blank">wave.webaim.org/extension</a></p>
+                        <div class="how-to">
+                            <strong>How to use:</strong>
+                            <ol>
+                                <li>Install WAVE extension for Chrome/Firefox</li>
+                                <li>Navigate to your webpage</li>
+                                <li>Click WAVE icon in browser toolbar</li>
+                                <li>Review errors (red), alerts (yellow), and features (green)</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <h4>Lighthouse</h4>
+                        <p><strong>What it does:</strong> Built-in Chrome tool that audits accessibility, performance, and more</p>
+                        <p><strong>Best for:</strong> Overall accessibility score and key metrics</p>
+                        <div class="how-to">
+                            <strong>How to use:</strong>
+                            <ol>
+                                <li>Open Chrome DevTools (F12)</li>
+                                <li>Go to "Lighthouse" tab</li>
+                                <li>Check "Accessibility" category</li>
+                                <li>Click "Analyze page load"</li>
+                                <li>Review score and failing audits</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <h4>HTML Validator</h4>
+                        <p><strong>What it does:</strong> Checks for valid HTML structure</p>
+                        <p><strong>Best for:</strong> Finding markup errors that affect accessibility</p>
+                        <p><strong>Link:</strong> <a href="https://validator.w3.org/" target="_blank">validator.w3.org</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testing-category">
+                <h3>2. Manual Testing Checklist</h3>
+                <p>Automated tools catch about 30-40% of accessibility issues. Manual testing is essential.</p>
+                
+                <div class="checklist">
+                    <div class="checklist-section">
+                        <h4>Keyboard Testing</h4>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check1">
+                            <label for="check1">Can you reach all interactive elements using Tab?</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check2">
+                            <label for="check2">Is focus order logical (follows visual order)?</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check3">
+                            <label for="check3">Are focus indicators clearly visible?</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check4">
+                            <label for="check4">Can you activate all buttons/links with Enter or Space?</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check5">
+                            <label for="check5">Can you close modals/dropdowns with Escape?</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check6">
+                            <label for="check6">Are there any keyboard traps?</label>
+                        </div>
+                    </div>
+
+                    <div class="checklist-section">
+                        <h4>Visual Testing</h4>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check7">
+                            <label for="check7">Zoom to 200% - does content still work?</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check8">
+                            <label for="check8">Check all text has sufficient contrast</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check9">
+                            <label for="check9">Information conveyed by color alone?</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check10">
+                            <label for="check10">Test in high contrast mode (Windows)</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check11">
+                            <label for="check11">All images have appropriate alt text?</label>
+                        </div>
+                    </div>
+
+                    <div class="checklist-section">
+                        <h4>Content Testing</h4>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check12">
+                            <label for="check12">Headings in logical order (h1, h2, h3)?</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check13">
+                            <label for="check13">Link text descriptive out of context?</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check14">
+                            <label for="check14">Forms have associated labels?</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check15">
+                            <label for="check15">Error messages are clear and helpful?</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check16">
+                            <label for="check16">Page has descriptive title?</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testing-category">
+                <h3>3. Screen Reader Testing</h3>
+                <p>Testing with screen readers reveals how blind users experience your site.</p>
+                
+                <div class="screen-reader-guide">
+                    <div class="sr-tool">
+                        <h4>NVDA (Windows - Free)</h4>
+                        <p><strong>Download:</strong> <a href="https://www.nvaccess.org/" target="_blank">nvaccess.org</a></p>
+                        <div class="basic-commands">
+                            <strong>Basic Commands:</strong>
+                            <ul>
+                                <li><strong>NVDA + N:</strong> Open NVDA menu</li>
+                                <li><strong>NVDA + Down Arrow:</strong> Read next item</li>
+                                <li><strong>H:</strong> Next heading</li>
+                                <li><strong>K:</strong> Next link</li>
+                                <li><strong>B:</strong> Next button</li>
+                                <li><strong>F:</strong> Next form field</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sr-tool">
+                        <h4>VoiceOver (Mac/iOS - Built-in)</h4>
+                        <p><strong>Activate:</strong> Cmd + F5 (Mac)</p>
+                        <div class="basic-commands">
+                            <strong>Basic Commands:</strong>
+                            <ul>
+                                <li><strong>VO + Right Arrow:</strong> Next item</li>
+                                <li><strong>VO + Cmd + H:</strong> Next heading</li>
+                                <li><strong>VO + U:</strong> Open rotor (navigation menu)</li>
+                                <li><strong>VO + Space:</strong> Activate item</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sr-testing-tips">
+                    <h4>What to Test With Screen Readers:</h4>
+                    <ul>
+                        <li>Can you understand page structure from headings?</li>
+                        <li>Are landmarks announced correctly (navigation, main, complementary)?</li>
+                        <li>Do images have meaningful alt text read aloud?</li>
+                        <li>Are form fields properly labeled?</li>
+                        <li>Do buttons/links have clear purposes?</li>
+                        <li>Are dynamic changes announced?</li>
+                        <li>Can you complete tasks without seeing the screen?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="testing-category">
+                <h3>4. Mobile and Responsive Testing</h3>
+                <div class="mobile-tests">
+                    <div class="mobile-test-item">
+                        <h4>Touch Target Size</h4>
+                        <p>All interactive elements should be at least 44×44 pixels</p>
+                    </div>
+                    <div class="mobile-test-item">
+                        <h4>Portrait and Landscape</h4>
+                        <p>Content should work in both orientations</p>
+                    </div>
+                    <div class="mobile-test-item">
+                        <h4>Zoom and Reflow</h4>
+                        <p>Content should reflow without horizontal scrolling when zoomed</p>
+                    </div>
+                    <div class="mobile-test-item">
+                        <h4>Mobile Screen Readers</h4>
+                        <p>Test with VoiceOver (iOS) or TalkBack (Android)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testing-category">
+                <h3>5. Browser Testing</h3>
+                <p>Test in multiple browsers and platforms:</p>
+                <ul>
+                    <li>Chrome (most popular)</li>
+                    <li>Firefox (excellent accessibility support)</li>
+                    <li>Safari (important for Mac/iOS users)</li>
+                    <li>Edge (important for Windows users)</li>
+                </ul>
+            </div>
+
+            <div class="testing-category">
+                <h3>6. User Testing</h3>
+                <div class="user-testing-guide">
+                    <h4>Testing with People with Disabilities</h4>
+                    <p>The most valuable testing comes from real users. Considerations:</p>
+                    <ul>
+                        <li>Recruit diverse users (different disabilities, assistive technologies)</li>
+                        <li>Compensate participants fairly for their time</li>
+                        <li>Observe without interrupting their natural workflow</li>
+                        <li>Ask about frustrations and what works well</li>
+                        <li>Test early and often—not just at the end</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <h2>Start Building Accessible Websites Today</h2>
+            <p>Use these techniques to create websites that work for everyone. Remember: accessibility is not a feature—it's a fundamental requirement.</p>
+            <div class="cta-buttons">
+                <a href="what.html" class="cta-button">Review the Principles</a>
+                <a href="why.html" class="cta-button secondary">Why It Matters</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <section class="contact-section">
+                <h2>Let's connect!</h2>
+                <form action="#" method="post" class="contact-form">
+                    <label for="name">Full Name
+                        <input type="text" id="name" name="name" required>
+                    </label>
+                    <label for="email">Email Address
+                        <input type="email" id="email" name="email" required>
+                    </label>
+                    <label for="message">Message
+                        <textarea id="message" name="message" required></textarea>
+                    </label>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+            <p class="copyright">&copy; 2025 Universal Design — Made by Ella Pasternak</p>
+        </div>
+    </footer>
+</body>
+</html>

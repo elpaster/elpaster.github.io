@@ -6,7 +6,7 @@
 
 :root {
   --primary-color: #2d5a7b;
-  --accent-color: #7fb3d5;
+  --accent-color: #2E75A0;
   --text-dark: #1a1a1a;
   --text-light: #4a5568;
   --bg-cream: #faf8f5;
@@ -404,6 +404,1644 @@ body.why-page {
 
   .why-page .quote-section blockquote {
       font-size: 1.2rem;
+  }
+}
+
+/* WHY PAGE */
+
+body.how-page {
+  background: linear-gradient(135deg, var(--bg-cream) 0%, #fff 100%);
+  color: var(--text-dark);
+  padding: 0;
+  margin: 0;
+}
+
+/* Hero Section - How Page */
+.how-page .hero-section {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 4rem 2rem 3rem;
+  background: linear-gradient(135deg, rgba(127, 179, 213, 0.15) 0%, rgba(45, 90, 123, 0.08) 100%);
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.how-page .page-title {
+  font-family: "Dongle", sans-serif;
+  font-weight: 500;
+  font-size: clamp(60px, 8vw, 90px);
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.how-page .hero-subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: var(--text-light);
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+/* Introduction Section */
+.how-page .intro-section {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+}
+
+.how-page .intro-section h2 {
+  font-family: "Dongle", sans-serif;
+  font-size: 45px;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.how-page .intro-section p {
+  color: var(--text-light);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* Major Sections */
+.how-page .major-section {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  position: relative;
+  transition: var(--transition);
+}
+
+.how-page .major-section h2 {
+  font-family: "Dongle", sans-serif;
+  font-size: 50px;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.how-page .section-icon {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+}
+
+/* Content Blocks */
+.how-page .content-block {
+  margin-bottom: 3rem;
+}
+
+.how-page .content-block h3 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin: 2rem 0 1.5rem;
+  font-weight: 600;
+}
+
+.how-page .content-block h4 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin: 1.5rem 0 1rem;
+  font-weight: 600;
+}
+
+.how-page .content-block p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.how-page .content-block ul,
+.how-page .content-block ol {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.how-page .content-block li {
+  margin-bottom: 0.5rem;
+}
+
+/* Principle Boxes */
+.how-page .principle-box {
+  background: linear-gradient(135deg, rgba(127, 179, 213, 0.05), rgba(143, 188, 143, 0.05));
+  padding: 2rem;
+  border-radius: 15px;
+  border-left: 4px solid var(--accent-color);
+  margin-bottom: 2rem;
+}
+
+.how-page .principle-box h4 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+/* Example Boxes */
+.how-page .example-box {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  border-left: 4px solid #6c757d;
+}
+
+.how-page .example-box.good {
+  background: #e8f5e9;
+  border-left: 4px solid #4caf50;
+}
+
+.how-page .example-box.bad {
+  background: #ffebee;
+  border-left: 4px solid #f44336;
+}
+
+.how-page .example-box.good strong {
+  color: var(--bg-white);
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+.alt-text {
+  color: var(--text-dark) !important;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.how-page .example-box.bad strong {
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.how-page .example-box pre {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.how-page .example-box code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.how-page .example-box .explanation {
+  font-style: italic;
+  color: var(--text-light);
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.how-page .example-box .note {
+  background: rgba(255, 193, 7, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 3px solid #ffc107;
+  margin-top: 1rem;
+}
+
+/* Code Elements */
+.how-page code {
+  background: #f5f5f5;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  color: #B4296E;
+}
+
+.how-page pre code {
+  background: transparent;
+  padding: 0;
+  color: #333;
+}
+
+/* Comparison Grid */
+.how-page .comparison-grid {
+  display: grid;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.how-page .comparison-card {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.how-page .comparison-card h4 {
+  color: var(--primary-color);
+  margin-top: 0;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Side by Side Comparisons */
+.how-page .side-by-side {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Attribute List */
+.how-page .attribute-list {
+  display: grid;
+  gap: 2rem;
+}
+
+.how-page .attribute-item {
+  background: linear-gradient(135deg, rgba(127, 179, 213, 0.05), rgba(255, 255, 255, 0.5));
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--accent-color);
+}
+
+.how-page .attribute-item h4 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+/* Contrast Requirements Table */
+.how-page .contrast-requirements {
+  margin: 2rem 0;
+}
+
+.how-page .contrast-requirements table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.how-page .contrast-requirements th,
+.how-page .contrast-requirements td {
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.how-page .contrast-requirements thead {
+  background: var(--primary-color);
+  color: white;
+}
+
+.how-page .contrast-requirements tbody tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+/* Color Examples */
+.how-page .color-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.how-page .color-swatch {
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.how-page .color-swatch:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* CSS Practice Boxes */
+.how-page .css-practice {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  border-left: 4px solid var(--accent-color);
+}
+
+.how-page .css-practice h4 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+/* Tool List */
+.how-page .tool-list {
+  list-style: none;
+  padding: 0;
+}
+
+.how-page .tool-list li {
+  background: linear-gradient(135deg, rgba(127, 179, 213, 0.1), rgba(143, 188, 143, 0.1));
+  padding: 1rem 1.5rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  border-left: 3px solid var(--accent-color);
+}
+
+.how-page .tool-list strong {
+  color: var(--primary-color);
+}
+
+/* Keyboard Pattern Sections */
+.how-page .keyboard-pattern {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.how-page .keyboard-pattern h4 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+.how-page .keyboard-pattern ul {
+  margin-left: 1.5rem;
+}
+
+/* Tabindex Guide */
+.how-page .tabindex-guide {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.how-page .tabindex-option {
+  background: #e8f5e9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #4caf50;
+}
+
+.how-page .tabindex-option.bad {
+  background: #ffebee;
+  border-left: 4px solid #f44336;
+}
+
+.how-page .tabindex-option strong {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Mistake List */
+.how-page .mistake-list {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.how-page .mistake-item {
+  background: #fff3cd;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #ffc107;
+}
+
+.how-page .mistake-item h4 {
+  margin-top: 0;
+  color: #856404;
+}
+
+/* Testing Category */
+.how-page .testing-category {
+  margin: 3rem 0;
+}
+
+.how-page .testing-category h3 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* Tool Grid */
+.how-page .tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.how-page .tool-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: var(--transition);
+  border-top: 4px solid var(--accent-color);
+}
+
+.how-page .tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.how-page .tool-card h4 {
+  color: var(--primary-color);
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.how-page .tool-card p {
+  margin: 0.5rem 0;
+}
+
+.how-page .tool-card strong {
+  color: var(--primary-color);
+}
+
+.how-page .tool-card a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.how-page .tool-card a:hover {
+  text-decoration: underline;
+}
+
+.how-page .how-to {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.how-page .how-to strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.how-page .how-to ol {
+  margin-left: 1.5rem;
+}
+
+/* Checklist */
+.how-page .checklist {
+  display: grid;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.how-page .checklist-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.how-page .checklist-section h4 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.how-page .checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.how-page .checklist-item:last-child {
+  border-bottom: none;
+}
+
+.how-page .checklist-item input[type="checkbox"] {
+  margin-top: 0.25rem;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.how-page .checklist-item label {
+  flex: 1;
+  cursor: pointer;
+  color: var(--text-light);
+}
+
+/* Screen Reader Guide */
+.how-page .screen-reader-guide {
+  display: grid;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.how-page .sr-tool {
+  background: linear-gradient(135deg, rgba(127, 179, 213, 0.1), rgba(143, 188, 143, 0.1));
+  padding: 2rem;
+  border-radius: 15px;
+  border-left: 4px solid var(--accent-color);
+}
+
+.how-page .sr-tool h4 {
+  color: var(--primary-color);
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.how-page .basic-commands {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.how-page .basic-commands strong {
+  display: block;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.how-page .basic-commands ul {
+  margin-left: 1.5rem;
+}
+
+.how-page .basic-commands li strong {
+  display: inline;
+  color: var(--accent-color);
+}
+
+/* SR Testing Tips */
+.how-page .sr-testing-tips {
+  background: #e3f2fd;
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  border-left: 4px solid #2196f3;
+}
+
+.how-page .sr-testing-tips h4 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+/* Mobile Tests */
+.how-page .mobile-tests {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.how-page .mobile-test-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-top: 3px solid var(--accent-color);
+}
+
+.how-page .mobile-test-item h4 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+/* User Testing Guide */
+.how-page .user-testing-guide {
+  background: linear-gradient(135deg, rgba(244, 185, 66, 0.1), rgba(127, 179, 213, 0.1));
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+}
+
+.how-page .user-testing-guide h4 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+/* Example Category */
+.how-page .example-category {
+  margin: 3rem 0;
+}
+
+.how-page .example-category h3 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* Call to Action */
+.how-page .cta-section {
+  background: linear-gradient(135deg, rgba(244, 185, 66, 0.1), rgba(127, 179, 213, 0.1));
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.how-page .cta-section h2 {
+  font-family: "Dongle", sans-serif;
+  font-size: 50px;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.how-page .cta-section p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.how-page .cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.how-page .cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(45, 90, 123, 0.3);
+}
+
+.how-page .cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(45, 90, 123, 0.4);
+}
+
+.how-page .cta-button.secondary {
+  background: white;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.how-page .cta-button.secondary:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Responsive Design for How Page */
+@media (max-width: 968px) {
+  .how-page .side-by-side {
+      grid-template-columns: 1fr;
+  }
+
+  .how-page .tool-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .how-page .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .how-page .cta-button {
+      width: 100%;
+      max-width: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .how-page .major-section {
+      padding: 2rem;
+  }
+
+  .how-page .hero-section {
+      padding: 3rem 1.5rem 2rem;
+  }
+
+  .how-page .intro-section {
+      padding: 2rem;
+  }
+
+  .how-page .content-block {
+      margin-bottom: 2rem;
+  }
+
+  .how-page .example-box pre {
+      font-size: 0.8rem;
+  }
+
+  .how-page .major-section h2 {
+      font-size: 40px;
+  }
+}
+
+body.what-page {
+  background: linear-gradient(135deg, var(--bg-cream) 0%, #fff 100%);
+  color: var(--text-dark);
+  padding: 0;
+  margin: 0;
+}
+
+/* Hero Section */
+.what-page .hero-section {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 4rem 2rem 3rem;
+  background: linear-gradient(135deg, rgba(127, 179, 213, 0.15) 0%, rgba(45, 90, 123, 0.08) 100%);
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.what-page .page-title {
+  font-family: "Dongle", sans-serif;
+  font-weight: 500;
+  font-size: clamp(60px, 8vw, 90px);
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.what-page .hero-subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: var(--text-light);
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+/* Definition Section */
+.what-page .definition-section {
+  margin-bottom: 4rem;
+}
+
+.what-page .definition-card {
+  background: linear-gradient(135deg, var(--primary-color), #1e4a66);
+  color: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.what-page .definition-icon {
+  font-size: 4rem;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.what-page .definition-content h2 {
+  font-family: "Dongle", sans-serif;
+  font-size: 45px;
+  margin: 0 0 1.5rem;
+  color: white;
+}
+
+.what-page .definition-text {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.what-page .definition-content p {
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+/* Application Section */
+.what-page .application-section {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+}
+
+.what-page .application-section h3 {
+  font-family: "Dongle", sans-serif;
+  font-size: 40px;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.what-page .application-section > p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.what-page .application-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.what-page .application-card {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(127, 179, 213, 0.05), rgba(143, 188, 143, 0.05));
+  border-radius: 15px;
+  transition: var(--transition);
+  border-top: 3px solid var(--accent-color);
+}
+
+.what-page .application-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.what-page .application-card .material-symbols-outlined {
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.what-page .application-card h4 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.what-page .application-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Principles Section */
+.what-page .principles-section {
+  margin: 4rem 0;
+}
+
+.what-page .principles-section > h2 {
+  font-family: "Dongle", sans-serif;
+  font-size: 50px;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.what-page .section-icon {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+}
+
+.what-page .principles-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.what-page .principles-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.what-page .principle-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  transition: var(--transition);
+  border-left: 5px solid var(--accent-color);
+}
+
+.what-page .principle-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+}
+
+.what-page .principle-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.what-page .principle-number {
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  color: white;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.what-page .principle-card h3 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin: 0;
+  font-weight: 600;
+}
+
+.what-page .principle-description {
+  color: var(--text-light);
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.what-page .web-examples h4 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.what-page .example-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  align-items: flex-start;
+}
+
+.what-page .example-item.good {
+  background: #e8f5e9;
+  border-left: 4px solid #307533;
+}
+
+.what-page .example-item.bad {
+  background: #ffebee;
+  border-left: 4px solid #f44336;
+}
+
+.what-page .example-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.what-page .example-item.good .example-icon {
+  color: #307533;
+}
+
+.what-page .example-item.bad .example-icon {
+  color: #f44336;
+}
+
+.what-page .example-item strong {
+  display: block;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.what-page .example-item p {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Standards Section */
+.what-page .standards-section {
+  margin: 4rem 0;
+}
+
+.what-page .standards-section > h2 {
+  font-family: "Dongle", sans-serif;
+  font-size: 50px;
+  color: var(--primary-color);
+  margin-bottom: 3rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.what-page .standard-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  margin-bottom: 3rem;
+}
+
+.what-page .standard-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 3px solid var(--accent-color);
+}
+
+.what-page .standard-icon {
+  font-size: 3rem;
+  color: var(--accent-color);
+}
+
+.what-page .standard-header h3 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin: 0;
+  font-weight: 600;
+}
+
+.what-page .standard-description {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* POUR Principles */
+.what-page .pour-principles h4 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.what-page .pour-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.what-page .pour-card {
+  background: linear-gradient(135deg, rgba(127, 179, 213, 0.1), rgba(143, 188, 143, 0.1));
+  padding: 2rem;
+  border-radius: 15px;
+  border-top: 4px solid var(--accent-color);
+}
+
+.what-page .pour-card h5 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+
+.what-page .pour-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.what-page .pour-card ul {
+  margin-left: 1.5rem;
+  color: var(--text-light);
+}
+
+.what-page .pour-card li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* WCAG Levels */
+.what-page .wcag-levels {
+  margin: 3rem 0;
+}
+
+.what-page .wcag-levels h4 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.what-page .level-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.what-page .level-card {
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.what-page .level-card strong {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.what-page .level-a {
+  background: #fff3cd;
+  border: 3px solid #ffc107;
+}
+
+.what-page .level-aa {
+  background: #d1ecf1;
+  border: 3px solid #17a2b8;
+}
+
+.what-page .level-aaa {
+  background: #d4edda;
+  border: 3px solid #28a745;
+}
+
+/* Semantic HTML Section */
+.what-page .semantic-examples h4 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin: 2rem 0 1rem;
+  font-weight: 600;
+}
+
+.what-page .semantic-examples p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.what-page .semantic-examples ul {
+  margin-left: 2rem;
+  color: var(--text-light);
+}
+
+.what-page .semantic-examples li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.what-page .semantic-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.what-page .comparison-good,
+.what-page .comparison-bad {
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.what-page .comparison-good {
+  background: #e8f5e9;
+  border-left: 4px solid #4caf50;
+}
+
+.what-page .comparison-bad {
+  background: #ffebee;
+  border-left: 4px solid #f44336;
+}
+
+.what-page .comparison-good h5,
+.what-page .comparison-bad h5 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+
+.what-page .comparison-good pre,
+.what-page .comparison-bad pre {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.what-page .comparison-good code,
+.what-page .comparison-bad code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.what-page .benefit,
+.what-page .problem {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+/* Semantic Elements Grid */
+.what-page .elements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.what-page .element-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.what-page .element-item code {
+  background: #f5f5f5;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  color: #B4296E;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.what-page .element-item p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ARIA Section */
+.what-page .aria-rules {
+  margin: 2rem 0;
+}
+
+.what-page .aria-rules h4 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.what-page .aria-rule-card {
+  background: #fff3cd;
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 5px solid #ffc107;
+}
+
+.what-page .rule-text {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #856404;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.what-page .rule-explanation {
+  font-size: 1.05rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.what-page .aria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.what-page .aria-use-case {
+  background: linear-gradient(135deg, rgba(127, 179, 213, 0.1), rgba(143, 188, 143, 0.1));
+  padding: 2rem;
+  border-radius: 12px;
+  border-top: 3px solid var(--accent-color);
+}
+
+.what-page .aria-use-case h5 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+
+.what-page .aria-use-case pre {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.what-page .aria-use-case code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.what-page .aria-use-case p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.what-page .aria-attributes {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.what-page .aria-attr {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid var(--accent-color);
+}
+
+.what-page .aria-attr strong {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.what-page .aria-attr p {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.what-page .aria-attr code {
+  background: #f5f5f5;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: #333;
+  display: block;
+  overflow-x: auto;
+}
+
+/* Examples Showcase Section */
+.what-page .examples-section {
+  margin: 4rem 0;
+}
+
+.what-page .examples-section > h2 {
+  font-family: "Dongle", sans-serif;
+  font-size: 50px;
+  color: var(--primary-color);
+  margin-bottom: 3rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.what-page .example-showcase {
+  display: grid;
+  gap: 3rem;
+}
+
+.what-page .showcase-item {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+}
+
+.what-page .showcase-item > h3 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin: 0 0 2rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--accent-color);
+}
+
+.what-page .showcase-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.what-page .showcase-bad,
+.what-page .showcase-good {
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.what-page .showcase-bad {
+  background: #ffebee;
+  border: 2px solid #f44336;
+}
+
+.what-page .showcase-good {
+  background: #e8f5e9;
+  border: 2px solid #4caf50;
+}
+
+.what-page .showcase-bad h4,
+.what-page .showcase-good h4 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.5rem;
+  margin: 0 0 1.5rem;
+  font-weight: 600;
+}
+
+.what-page .showcase-bad h4 {
+  color: #d32f2f;
+}
+
+.what-page .showcase-good h4 {
+  color: #388e3c;
+}
+
+.what-page .visual-example {
+  margin: 1.5rem 0;
+}
+
+.what-page .code-display {
+  margin-top: 1rem;
+}
+
+.what-page .code-display pre {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.what-page .code-display code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.what-page .problems,
+.what-page .benefits {
+  margin-top: 1.5rem;
+}
+
+.what-page .problems strong {
+  color: #AA2424;
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.what-page .benefits strong {
+  color: #307533;
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.what-page .problems ul,
+.what-page .benefits ul {
+  margin-left: 1.5rem;
+}
+
+.what-page .problems li,
+.what-page .benefits li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+/* Call to Action */
+.what-page .cta-section {
+  background: linear-gradient(135deg, rgba(244, 185, 66, 0.1), rgba(127, 179, 213, 0.1));
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.what-page .cta-section h2 {
+  font-family: "Dongle", sans-serif;
+  font-size: 50px;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.what-page .cta-section p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.what-page .cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.what-page .cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(45, 90, 123, 0.3);
+}
+
+.what-page .cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(45, 90, 123, 0.4);
+}
+
+.what-page .cta-button.secondary {
+  background: white;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.what-page .cta-button.secondary:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Responsive Design for What Page */
+@media (max-width: 968px) {
+  .what-page .semantic-comparison,
+  .what-page .showcase-comparison {
+      grid-template-columns: 1fr;
+  }
+
+  .what-page .definition-card {
+      flex-direction: column;
+  }
+
+  .what-page .definition-icon {
+      font-size: 3rem;
+  }
+
+  .what-page .application-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .what-page .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .what-page .cta-button {
+      width: 100%;
+      max-width: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .what-page .hero-section {
+      padding: 3rem 1.5rem 2rem;
+  }
+
+  .what-page .definition-card,
+  .what-page .application-section,
+  .what-page .standard-card,
+  .what-page .showcase-item {
+      padding: 2rem;
+  }
+
+  .what-page .principle-card {
+      padding: 2rem;
+  }
+
+  .what-page .principle-header {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .what-page .standard-header {
+      flex-direction: column;
+      text-align: center;
   }
 }
 
